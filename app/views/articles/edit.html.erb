@@ -1,0 +1,8 @@
+<%= simple_form_for(@article) do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, placeholder: 'Type a title' %>
+<%= f.label :content %>
+<%= f.text_field :content, placeholder: 'Type some content' %>
+
+<%= f.submit 'edit article' %>
+<% end %>
