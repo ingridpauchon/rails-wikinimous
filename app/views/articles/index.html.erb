@@ -1,12 +1,14 @@
 <div class="container">
 
-<div>
+<div class="btn btn-warning" style="margin: 20px 0px;">
 <%= link_to 'create new article', new_article_path %>
 </div>
 <div>
 <% @articles.each do |article| %>
+<div class="alert alert-success" role="alert">
 <h1><%= link_to article.title, article_path(article) %></h1>
 <p><%= article.content %></p>
+</div>
 <% end %>
 </div>
 

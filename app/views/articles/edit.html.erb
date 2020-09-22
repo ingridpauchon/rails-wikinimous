@@ -1,8 +1,19 @@
+<div class="container">
 <%= simple_form_for(@article) do |f| %>
+<div class="alert alert-success" role="alert" style="padding-bottom: 40px">
 <%= f.label :title %>
-<%= f.text_field :title, placeholder: 'Type a title' %>
+<%= f.text_field :title, placeholder: 'Type a title', class: "form-control" %>
+</div>
+<div class="alert alert-success" role="alert" style="padding-bottom: 40px">
 <%= f.label :content %>
-<%= f.text_field :content, placeholder: 'Type some content' %>
+<%= f.text_field :content, placeholder: 'Type some content', class: "form-control" %>
+</div>
 
-<%= f.submit 'edit article' %>
+<%= f.submit 'edit article', class: "btn btn-warning" %>
 <% end %>
+
+<div class="btn btn-warning" style="margin-top: 8px;">
+<%= link_to 'back to articles', articles_path %>
+</div>
+
+</div>
